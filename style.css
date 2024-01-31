@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  border-bottom: 2px solid black;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.brand {
+  font-size: 30px;
+}
+
+.scoreboard {
+  max-width: 300px;
+  width: 100%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+}
+
+.scoreboard-letter {
+  height: 45px;
+  width: 45px;
+  font-size: 30px;
+  border: 3px solid grey;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.close {
+  background-color: orange;
+}
+
+.wrong {
+  background-color: gray;
+}
+
+.invalid {
+  animation: flash 1s;
+}
+
+@keyframes flash {
+  5% {
+    border-color: red;
+  }
+  100% {
+    border-color: gray;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+.info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+.winner {
+  animation: rainbow 4s infinite linear;
+}
